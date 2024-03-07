@@ -55,8 +55,8 @@ def generate_plot(pricedata, total_min_price, total_max_price, label = 'heute', 
         ax.patches[current_hour].set_linewidth(2)
 
     # Setze die Y-Achse mit einem Minimalwert unterhalb des absoluten Minimums
-    min_y_value = min_price - 0.1 * min_price
-    max_y_value = max_price + 0.025 * max_price
+    min_y_value = total_min_price - 0.1 * total_min_price
+    max_y_value = total_max_price + 0.025 * total_max_price
     ax.set_ylim(min_y_value, max_y_value)
 
     # Füge Achsentitel hinzu
